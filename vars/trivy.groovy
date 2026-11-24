@@ -1,4 +1,3 @@
-def call()
-{
-    sh "trivy fs . -o results.json"
+def call(String targetPath = '.') {
+    sh "trivy fs ${targetPath}"
 }
